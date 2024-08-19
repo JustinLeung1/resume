@@ -1,0 +1,202 @@
+%-------------------------
+% Resume in Latex
+% Author : Justin Leung
+% Based off of: https://github.com/sb2nov/resume
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Justin Leung} \\ \vspace{1pt}
+    \small 916-501-5227 $|$ \href{mailto:justinleung1999@hotmail.com}{\underline{justinleung1999@hotmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/justin-leung1}{\underline{linkedin.com/in/justin-leung1}} $|$
+    \href{https://github.com/JustinLeung1}{\underline{github.com/JustinLeung1}}
+\end{center}
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Proficient Languages}{: Java, Javascript, Python, Ruby} \\
+     \textbf{Frameworks}{: Vert.x, React, Node.js, Flask, Ruby on Rails} \\
+     \textbf{Developer Tools}{: Git, Docker, AWS, Microsoft Azure} \\
+     \textbf{Databases}{: Azure Cosmos DB, Dynamo DB, MySQL}
+    }}
+\end{itemize}
+ 
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Amazon}{2023 -- Present}
+      {Software Development Engineer, Ad Formats}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented Interactive Audio Ads on Third Party (3p) Alexa Streaming Services} %Perhaps add using SNS
+        \resumeItem{Setup a Slack Bot notifying developers of code changes and pipeline updates with AWS SNS}
+        \resumeItem{Automated the manual input of content preferences of streaming services, resulting in 50 hours saved per month}
+        \resumeItem{On boarded new engineers onto existing applications by creating step-by-step documentation and leading system design workshops}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Amazon}{2022 -- 2023}
+      {Software Development Engineer, Interactive Ad Formats}{Palo Alto, CA}
+      \resumeItemListStart
+        \resumeItem{Assisted with launch of Interactive Video Ads (IVA) Software Development Kit on Amazon Publisher Services by passing multiple security reviews, discovering multiple launch delaying bugs, and implementing parsing of Google's Interactive Media Ads (IMA) specific ad format}
+        \resumeItem{Created Metrics Logging System for IVA using AWS Cloudwatch, Lambda, API Gateway, CDK, WAF}
+        \resumeItem{Enabled ad flow from Amazon Ad Exchange onto 3p video streaming services with IVA implemented}
+        \resumeItem{Led multiple hackathon teams in creating a new QR Code ad format and reducing internal dependencies}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Walmart}{2022}
+      {Full Stack Software Engineer, Walmart GoLocal}{Sunnyvale, CA}
+      \resumeItemListStart
+        \resumeItem{Implemented backend inheritance logic for client settings to store settings, resulting in a 65\% data storage reduction}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Walmart}{2021}
+      {Full Stack Software Engineering Intern, Walmart GoLocal(Stealth Stage)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Worked on Delivery As A Service team implementing a dashboard visualizing Client updates}
+        \resumeItem{Created REST API endpoints with Java Spring and Azure Cosmos DB}
+        \resumeItem{Developed front end components in React and Material UI}
+        \resumeItem{Captured Client updates using Apache Kafka}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {American Express}{2021}
+      {Software Development Engineering Intern, Machine Learning Platform}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed multiple RESTful APIs with Java Vert.x Library to monitor AWS EC2/ECR processes in Java and Python}
+        \resumeItem{Migrated and modified Python applications to streamline log capturing in Kibana for Machine Learning Organization}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {San Jose State University}{2022}
+      {Bachelor of Science in Software Engineering}{San Jose, CA}
+        \resumeItemListStart
+        \resumeItem{Relevant Coursework: Advanced Algorithm Design, Assembly Language Programming(MIPS), Database Systems, Mobile Software Engineering} %Perhaps add using SNS
+        \resumeItem{Organizations: Beta Theta Pi Fraternity, inter } %Perhaps add using SNS
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------Leadership-----------
+\section{Leadership}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+      {Amazon}{2024}
+      {Vice President of External Outreach, Asians @ Amazon}{New York}
+      \resumeItemListStart
+        \resumeItem{Coordinated, planned and led events with hundreds of participants at companies such as Linkedin, Meta, Visa, Bloomberg, New York City Mets }
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\end{document}
